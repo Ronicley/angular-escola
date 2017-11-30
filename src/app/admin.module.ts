@@ -7,7 +7,7 @@ import {AdminComponent} from './admin/admin.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {SharedModule} from '../shared/shared.module';
+import {SharedModule} from './shared/shared.module';
 import {CadastroDeDisciplinaComponent} from './cadastro-de-disciplina/cadastro-de-disciplina.component';
 import {CadastroDeTurmaComponent} from './cadastro-de-turma/cadastro-de-turma.component';
 import {DisciplinaComponent} from './disciplina/disciplina.component';

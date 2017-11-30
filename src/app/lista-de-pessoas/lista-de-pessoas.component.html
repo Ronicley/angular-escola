@@ -1,8 +1,30 @@
+<a routerLink="/admin/pessoas/0/novo" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Cadastrar</a>
 <h1>Lista de Pessoas</h1>
-<ul>
-  <li *ngFor="let pessoa of pessoas">
-    <a [routerLink]="['/pessoas', pessoa.id]">
-      {{pessoa.nome}}
-    </a>
-  </li>
-</ul>
+<hr>
+<div class="alert alert-success" *ngIf="excluir_ok">
+    <strong>Sucesso!</strong>Pessoa excluída com sucesso.
+</div>
+<div class="alert alert-danger" *ngIf="excluir_erro">
+    <strong>Ops!</strong> Ocorreu um erro ao tentar excluir a pessoa. Aguarde alguns instantes e tente novamente.
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>Nome</th>
+        <th width="250">Curso</th>
+        <th width="250">Cargo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pessoa of pessoas">
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.curso}}</td>
+        <td>{{pessoa.cargo}}</td>
+        <td>
+            <a [routerLink]="['/admin/pessoas/', pessoa.id]" class="btn btn-primary btn-sm">Abrir</a>
+            <a [routerLink]="['/admin/pessoas', pessoa.id, 'editar']" class="btn btn-secondary btn-sm">Editar</a>
+            <a href="javascript:void(0)" class="btn btn-danger btn-sm" (click)="excluir(pessoa)">Excluir</a>
+        </td>
+    </tr>
+    </tbody>
+</table>

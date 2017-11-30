@@ -7,7 +7,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
 import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import {PublicoModule} from './publico/publico.module';
-import {AdminModule} from './admin/admin.module';
+import {AdminModule} from './admin.module';
+import { PessoasService } from './pessoa.service';
 
 @NgModule({
   imports: [
@@ -21,10 +22,9 @@ import {AdminModule} from './admin/admin.module';
   ],
   declarations: [
     AppComponent,
-    PaginaNaoEncontradaComponent
   ],
   providers: [
-
+    PessoasService
   ],
   bootstrap: [AppComponent]
 })
