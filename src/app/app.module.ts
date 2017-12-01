@@ -5,10 +5,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
-import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
+import {PaginaNaoEncontradaComponent} from './admin/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import {PublicoModule} from './publico/publico.module';
-import {AdminModule} from './admin.module';
-import { PessoasService } from './pessoa.service';
+import {AdminModule} from './admin/admin.module';
+
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ import { PessoasService } from './pessoa.service';
     AppComponent,
   ],
   providers: [
-    PessoasService
+    
   ],
   bootstrap: [AppComponent]
 })

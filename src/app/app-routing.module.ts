@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 // import {ListaDeTurmasComponent} from './lista-de-turmas/lista-de-turmas.component';
-import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
+import {PaginaNaoEncontradaComponent} from './admin/pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 const appRoutes: Routes = [
   // {path: 'cadastrar-disciplina', component: CadastroDeDisciplinaComponent},
